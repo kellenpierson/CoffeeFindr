@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		4308AD4F1B79B89100018030 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4308AD4E1B79B89100018030 /* main.m */; };
 		4308AD521B79B89100018030 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4308AD511B79B89100018030 /* AppDelegate.m */; };
-		4308AD551B79B89100018030 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4308AD541B79B89100018030 /* ViewController.m */; };
 		4308AD581B79B89100018030 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4308AD561B79B89100018030 /* Main.storyboard */; };
 		4308AD5A1B79B89100018030 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4308AD591B79B89100018030 /* Images.xcassets */; };
 		4308AD5D1B79B89100018030 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4308AD5B1B79B89100018030 /* LaunchScreen.xib */; };
 		4308AD691B79B89100018030 /* CoffeeFindrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4308AD681B79B89100018030 /* CoffeeFindrTests.m */; };
+		4308AD741B79B8E800018030 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4308AD731B79B8E800018030 /* ListViewController.m */; };
+		4308AD761B79B92A00018030 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4308AD751B79B92A00018030 /* CoreLocation.framework */; };
+		4308AD781B79B93000018030 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4308AD771B79B93000018030 /* MapKit.framework */; };
+		4308AD7B1B79C0CD00018030 /* CoffeePlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 4308AD7A1B79C0CD00018030 /* CoffeePlace.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +35,18 @@
 		4308AD4E1B79B89100018030 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4308AD501B79B89100018030 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4308AD511B79B89100018030 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4308AD531B79B89100018030 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4308AD541B79B89100018030 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4308AD571B79B89100018030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4308AD591B79B89100018030 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4308AD5C1B79B89100018030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4308AD621B79B89100018030 /* CoffeeFindrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeFindrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4308AD671B79B89100018030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4308AD681B79B89100018030 /* CoffeeFindrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoffeeFindrTests.m; sourceTree = "<group>"; };
+		4308AD721B79B8E800018030 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		4308AD731B79B8E800018030 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		4308AD751B79B92A00018030 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4308AD771B79B93000018030 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4308AD791B79C0CD00018030 /* CoffeePlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeePlace.h; sourceTree = "<group>"; };
+		4308AD7A1B79C0CD00018030 /* CoffeePlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeePlace.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4308AD781B79B93000018030 /* MapKit.framework in Frameworks */,
+				4308AD761B79B92A00018030 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,8 @@
 		4308AD401B79B89100018030 = {
 			isa = PBXGroup;
 			children = (
+				4308AD771B79B93000018030 /* MapKit.framework */,
+				4308AD751B79B92A00018030 /* CoreLocation.framework */,
 				4308AD4B1B79B89100018030 /* CoffeeFindr */,
 				4308AD651B79B89100018030 /* CoffeeFindrTests */,
 				4308AD4A1B79B89100018030 /* Products */,
@@ -83,8 +94,10 @@
 			children = (
 				4308AD501B79B89100018030 /* AppDelegate.h */,
 				4308AD511B79B89100018030 /* AppDelegate.m */,
-				4308AD531B79B89100018030 /* ViewController.h */,
-				4308AD541B79B89100018030 /* ViewController.m */,
+				4308AD721B79B8E800018030 /* ListViewController.h */,
+				4308AD731B79B8E800018030 /* ListViewController.m */,
+				4308AD791B79C0CD00018030 /* CoffeePlace.h */,
+				4308AD7A1B79C0CD00018030 /* CoffeePlace.m */,
 				4308AD561B79B89100018030 /* Main.storyboard */,
 				4308AD591B79B89100018030 /* Images.xcassets */,
 				4308AD5B1B79B89100018030 /* LaunchScreen.xib */,
@@ -219,9 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4308AD551B79B89100018030 /* ViewController.m in Sources */,
 				4308AD521B79B89100018030 /* AppDelegate.m in Sources */,
+				4308AD7B1B79C0CD00018030 /* CoffeePlace.m in Sources */,
 				4308AD4F1B79B89100018030 /* main.m in Sources */,
+				4308AD741B79B8E800018030 /* ListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
