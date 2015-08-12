@@ -8,11 +8,13 @@
 
 #import "ListViewController.h"
 #import "CoffeePlace.h"
+#import "DetailViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface ListViewController () <CLLocationManagerDelegate>
+@interface ListViewController () <CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property CLLocationManager *locationManager;
 @property CLLocation *currentLocation;
 @property NSArray *coffeePlacesArray;
@@ -27,6 +29,8 @@
     self.locationManager = [CLLocationManager new];
     self.locationManager.delegate = self;
     [self updateCurrentLocation];
+
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
 }
 
 - (void)updateCurrentLocation {
@@ -59,9 +63,7 @@
         NSArray *sortedArray = [temporaryArray sortedArrayUsingDescriptors:@[sortDescriptor]];
         self.coffeePlacesArray = [NSArray arrayWithArray:sortedArray];
 
-        for (CoffeePlace *coffeePlace in self.coffeePlacesArray) {
-            NSLog(@"%f",coffeePlace.milesDifference);
-        }
+        [self.tableView reloadData];
     }];
 }
 
@@ -69,6 +71,26 @@
     self.currentLocation = locations.firstObject;
     [self.locationManager stopUpdatingLocation];
     [self findCoffeePlaces:self.currentLocation];
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.coffeePlacesArray.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    cell.textLabel.text = [[[self.coffeePlacesArray objectAtIndex:indexPath.row]mapItem]name];
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    DetailViewController *detailVC = [segue destinationViewController];
+    detailVC.coffeePlace = [self.coffeePlacesArray objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    detailVC.currentLocation = self.currentLocation;
 }
 
 

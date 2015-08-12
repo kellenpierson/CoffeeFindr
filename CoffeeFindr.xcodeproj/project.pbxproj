@@ -17,6 +17,7 @@
 		4308AD761B79B92A00018030 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4308AD751B79B92A00018030 /* CoreLocation.framework */; };
 		4308AD781B79B93000018030 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4308AD771B79B93000018030 /* MapKit.framework */; };
 		4308AD7B1B79C0CD00018030 /* CoffeePlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 4308AD7A1B79C0CD00018030 /* CoffeePlace.m */; };
+		437E74F01B7BF7BD00DEE52E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 437E74EF1B7BF7BD00DEE52E /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		4308AD771B79B93000018030 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4308AD791B79C0CD00018030 /* CoffeePlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeePlace.h; sourceTree = "<group>"; };
 		4308AD7A1B79C0CD00018030 /* CoffeePlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeePlace.m; sourceTree = "<group>"; };
+		437E74EE1B7BF7BD00DEE52E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		437E74EF1B7BF7BD00DEE52E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				4308AD511B79B89100018030 /* AppDelegate.m */,
 				4308AD721B79B8E800018030 /* ListViewController.h */,
 				4308AD731B79B8E800018030 /* ListViewController.m */,
+				437E74EE1B7BF7BD00DEE52E /* DetailViewController.h */,
+				437E74EF1B7BF7BD00DEE52E /* DetailViewController.m */,
 				4308AD791B79C0CD00018030 /* CoffeePlace.h */,
 				4308AD7A1B79C0CD00018030 /* CoffeePlace.m */,
 				4308AD561B79B89100018030 /* Main.storyboard */,
@@ -232,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				437E74F01B7BF7BD00DEE52E /* DetailViewController.m in Sources */,
 				4308AD521B79B89100018030 /* AppDelegate.m in Sources */,
 				4308AD7B1B79C0CD00018030 /* CoffeePlace.m in Sources */,
 				4308AD4F1B79B89100018030 /* main.m in Sources */,
@@ -432,6 +438,7 @@
 				4308AD6E1B79B89100018030 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4308AD6F1B79B89100018030 /* Build configuration list for PBXNativeTarget "CoffeeFindrTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +447,7 @@
 				4308AD711B79B89100018030 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
