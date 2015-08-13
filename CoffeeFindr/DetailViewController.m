@@ -42,9 +42,11 @@
         MKRoute *route = response.routes.lastObject;
 
         NSString *allSteps = [NSString new];
-        for (int i = 0; i < route.steps.count; i++) {
+        for (int i = 1; i < route.steps.count; i++) {
             MKRouteStep *step = [route.steps objectAtIndex:i];
             NSString *newStepString = step.instructions;
+            NSString *stepDistanceString = [NSString stringWithFormat:@"Walk %.2f miles then\n", (step.distance / 1609.34)];
+            allSteps = [allSteps stringByAppendingString:stepDistanceString];
             allSteps = [allSteps stringByAppendingString:newStepString];
             allSteps = [allSteps stringByAppendingString:@"\n\n"];
         }

@@ -80,6 +80,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     cell.textLabel.text = [[[self.coffeePlacesArray objectAtIndex:indexPath.row]mapItem]name];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f miles away",[[self.coffeePlacesArray objectAtIndex:indexPath.row]milesDifference]];
     return cell;
 }
 
